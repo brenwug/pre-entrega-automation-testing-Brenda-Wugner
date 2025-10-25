@@ -1,4 +1,5 @@
 Propósito del proyecto
+
 Este proyecto automatiza pruebas funcionales básicas del sitio [SauceDemo](https://www.saucedemo.com/), incluyendo:
 - Validación del login de usuarios.
 - Navegación y verificación del catálogo de productos.
@@ -17,14 +18,14 @@ Tecnologías utilizadas
 Instalación de dependencias
 1. Clonar el repositorio:
 ```bash
-git clone <git@github.com:brenwug/pre-entrega-automation-testing-Brenda-Wugner.git>
-cd <pre-entrega-automation-testing-Brenda-Wugner>
+git clone https://github.com/brenwug/pre-entrega-automation-testing-Brenda-Wugner.git
+cd pre-entrega-automation-testing-Brenda-Wugner
 
 Instalar dependencias con pip:
 pip install selenium pytest webdriver-manager pytest-html
 
 Ejecución de Pruebas:
-Para ejecutar todos los tests en la terminar ingresar pytest -v --html=report.html
+Para ejecutar todos los tests en la terminal ingresar pytest -v -s --html=report.html
 Para ejecutar un test en particular
 pytest -v -s tests/test_login.py
 
