@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import os
-from utils import login
+from utils.utils import login
 
 
 def test_carrito(driver):
@@ -25,8 +25,8 @@ def test_carrito(driver):
         'shopping_cart_badge'))
         ).text
         assert badge == '1'
-        os.makedirs("prints", exist_ok=True)
-        screenshot_path = os.path.join("prints", "producto_en_carrito.png")
+        os.makedirs("reports", exist_ok=True)
+        screenshot_path = os.path.join("reports", "producto_en_carrito.png")
         driver.save_screenshot(screenshot_path)
         print('Carrito OK =', badge)
 

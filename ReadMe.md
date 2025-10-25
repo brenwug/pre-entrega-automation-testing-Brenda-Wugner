@@ -1,9 +1,11 @@
 Propósito del proyecto
+
 Este proyecto automatiza pruebas funcionales básicas del sitio [SauceDemo](https://www.saucedemo.com/), incluyendo:
 - Validación del login de usuarios.
 - Navegación y verificación del catálogo de productos.
 - Interacción con el carrito de compras, verificando que los productos se agreguen correctamente.
 - Validación de elementos importantes como el menú de hamburguesa, el filtro de productos y el icono del carrito.
+
 El objetivo es aplicar los contenidos aprendidos durante la primera mitad del curso de Testing Automatizado.
 
 Tecnologías utilizadas
@@ -24,7 +26,7 @@ Instalar dependencias con pip:
 pip install selenium pytest webdriver-manager pytest-html
 
 Ejecución de Pruebas:
-Para ejecutar todos los tests en la terminar ingresar pytest -v --html=report.html
+Para ejecutar todos los tests en la terminal ingresar pytest -v -s --html=reports/reporte.html
 Para ejecutar un test en particular
 pytest -v -s tests/test_login.py
 

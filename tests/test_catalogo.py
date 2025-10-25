@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import os
-from utils import login
+from utils.utils import login
 
 def test_catalogo(driver):
     
@@ -32,8 +32,8 @@ def test_catalogo(driver):
         precio = primer_producto.find_element(By.CLASS_NAME, "inventory_item_price").text
         print(f"Primer producto: {nombre} - {precio}")
 
-        os.makedirs("prints", exist_ok=True)
-        screenshot_path = os.path.join("prints", "catalogo.png")
+        os.makedirs("reports", exist_ok=True)
+        screenshot_path = os.path.join("reports", "catalogo.png")
         driver.save_screenshot(screenshot_path)
 
         # Validar menu
