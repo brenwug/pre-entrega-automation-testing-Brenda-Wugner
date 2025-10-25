@@ -10,7 +10,7 @@ def test_login(driver):
 
 
     try:
-        # Ir al sitio y validar login pero importado desde utilspy
+        # Ir al sitio y validar login pero importado desde utils.py
         login(driver)
 
         WebDriverWait(driver, 10).until(EC.url_contains("/inventory.html"))
