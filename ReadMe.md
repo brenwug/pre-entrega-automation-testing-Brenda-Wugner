@@ -19,8 +19,8 @@ Tecnologías utilizadas
 Instalación de dependencias
 1. Clonar el repositorio:
 ```bash
-git clone <git@github.com:brenwug/pre-entrega-automation-testing-Brenda-Wugner.git>
-cd <pre-entrega-automation-testing-Brenda-Wugner>
+git clone https://github.com/brenwug/pre-entrega-automation-testing-Brenda-Wugner.git
+cd pre-entrega-automation-testing-Brenda-Wugner
 
 Instalar dependencias con pip:
 pip install selenium pytest webdriver-manager pytest-html
