@@ -28,7 +28,7 @@ def test_carrito(driver):
         os.makedirs("prints", exist_ok=True)
         screenshot_path = os.path.join("prints", "producto_en_carrito.png")
         driver.save_screenshot(screenshot_path)
-        print('Carrito OK →', badge)
+        print('Carrito OK =', badge)
 
         # Navegar al carrito de compras
         driver.find_element(By.CLASS_NAME, "shopping_cart_link").click()
