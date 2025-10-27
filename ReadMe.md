@@ -18,7 +18,7 @@ Tecnologías utilizadas
 
 Instalación de dependencias
 1. Clonar el repositorio:
-```bash
+bash
 git clone https://github.com/brenwug/pre-entrega-automation-testing-Brenda-Wugner.git
 cd pre-entrega-automation-testing-Brenda-Wugner
 
