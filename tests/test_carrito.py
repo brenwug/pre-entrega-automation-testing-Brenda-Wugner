@@ -7,7 +7,7 @@ def test_carrito(login_in_driver):
     driver = login_in_driver
 
     try:
-        # Ir al sitio y validar login pero importado desde utils.py
+        # Ir al sitio y validar login pero importado desde conftest.py
         WebDriverWait(driver, 10).until(EC.url_contains("/inventory.html"))
 
         # Busca productos
@@ -24,7 +24,7 @@ def test_carrito(login_in_driver):
         ).text
 
         assert badge == '1'
-        
+
         os.makedirs("reports", exist_ok=True)
         screenshot_path = os.path.join("reports", "producto_en_carrito.png")
         driver.save_screenshot(screenshot_path)

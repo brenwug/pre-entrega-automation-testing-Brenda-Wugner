@@ -26,6 +26,6 @@ Instalar dependencias con pip:
 pip install selenium pytest webdriver-manager pytest-html
 
 Ejecución de Pruebas:
-Para ejecutar todos los tests ir al archivo run_tests.py y hacer clic en run python file, va a realizar las pruennas y generar un reporte html en la carpeta reports.
+Para ejecutar todos los tests ir al archivo run_tests.py y hacer clic en run python file, va a realizar las pruebas y generar un reporte html en la carpeta reports.
 
 Todos los screenshots se guardan automáticamente en la carpeta prints/ para evidencia visual de las pruebas.
