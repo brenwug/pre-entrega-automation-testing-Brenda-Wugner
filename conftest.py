@@ -3,6 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service 
 from selenium.webdriver.chrome.options import Options  
 from webdriver_manager.chrome import ChromeDriverManager
+from pages.login_page import LoginPage
 
 @pytest.fixture(scope="function")
 def driver():
@@ -15,3 +16,9 @@ def driver():
     driver.implicitly_wait(5)
     yield driver
     driver.quit()
+
+@pytest.fixture
+def login_in_driver(driver):
+    login_page = LoginPage(driver)
+    login_page.abrir_pagina().login_completo("standard_user", "secret_sauce")
+    return driver

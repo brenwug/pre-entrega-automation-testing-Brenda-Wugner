@@ -2,14 +2,12 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import os
-from utils.utils import login
 
+def test_carrito(login_in_driver):
+    driver = login_in_driver
 
-def test_carrito(driver):
-    
     try:
         # Ir al sitio y validar login pero importado desde utils.py
-        login(driver)
         WebDriverWait(driver, 10).until(EC.url_contains("/inventory.html"))
 
         # Busca productos
@@ -24,7 +22,9 @@ def test_carrito(driver):
         badge = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME,
         'shopping_cart_badge'))
         ).text
+
         assert badge == '1'
+        
         os.makedirs("reports", exist_ok=True)
         screenshot_path = os.path.join("reports", "producto_en_carrito.png")
         driver.save_screenshot(screenshot_path)

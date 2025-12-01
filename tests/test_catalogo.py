@@ -3,13 +3,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import os
-from utils.utils import login
 
-def test_catalogo(driver):
+def test_catalogo(login_in_driver):
+    driver = login_in_driver
     
     try:
-        # Ir al sitio y validar login pero importado desde utils.py
-        login(driver)
         WebDriverWait(driver, 10).until(EC.url_contains("/inventory.html"))
 
  # Validar que el título en inventory sea Products

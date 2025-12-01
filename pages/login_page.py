@@ -17,7 +17,7 @@ class LoginPage:
         self.driver = driver
         self.wait = WebDriverWait(driver,10)
     
-    def abrir(self):
+    def abrir_pagina(self):
         self.driver.get(self.URL) #Carga la URL en el navegador
         return self
     
