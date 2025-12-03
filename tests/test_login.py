@@ -5,12 +5,9 @@ from selenium.webdriver.support import expected_conditions as EC
 import os
 import pytest
 from pages.login_page import LoginPage
+from utils.datos import leer_csv_login
 
-CASOS_LOGIN = [
-    ("standard_user", "secret_sauce", True), #Usuario valido
-    ("locked_out_user", "secret_sauce", False), #usuario bloqueado
-    ("usuario_malo", "password_malo", False), #usuario invalido
-]
+CASOS_LOGIN = leer_csv_login("datos/login.csv") #importa los datos del archivo csv
 
 @pytest.mark.parametrize("usuario, clave, debe_funcionar", CASOS_LOGIN)
 def test_login(driver, usuario, clave, debe_funcionar):
