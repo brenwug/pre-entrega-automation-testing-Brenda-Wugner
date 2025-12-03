@@ -1,0 +1,11 @@
+2025-12-03 19:23:39 INFO TalentoTech: Relizando la solitud GET a https://reqres.in/api/users 
+2025-12-03 19:23:40 INFO TalentoTech: Status code: 403
+2025-12-03 19:28:27 INFO TalentoTech: Relizando la solitud GET a https://reqres.in/api/users 
+2025-12-03 19:28:28 INFO TalentoTech: Status code: 403
+2025-12-03 20:14:35 INFO TalentoTech: Ejecutando GET: https://reqres.in/api/users/2
+2025-12-03 20:14:36 INFO TalentoTech: Status: 403
+2025-12-03 20:14:36 INFO TalentoTech: Ejecutando POST a https://reqres.in/api/users con payload {'name': 'Brenda', 'job': 'Alumna'}
+2025-12-03 20:14:37 INFO TalentoTech: Ejecutando DELETE: https://reqres.in/api/users/2
+2025-12-03 20:25:44 INFO TalentoTech: GET → https://jsonplaceholder.typicode.com/users/1
+2025-12-03 20:25:45 INFO TalentoTech: POST → https://jsonplaceholder.typicode.com/users payload={'name': 'Brenda', 'username': 'alumna', 'email': 'brenda@example.com'}
+2025-12-03 20:25:46 INFO TalentoTech: DELETE → https://jsonplaceholder.typicode.com/users/1

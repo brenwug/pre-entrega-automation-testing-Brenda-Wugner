@@ -22,3 +22,9 @@ def login_in_driver(driver):
     login_page = LoginPage(driver)
     login_page.abrir_pagina().login_completo("standard_user", "secret_sauce")
     return driver
+
+@pytest.fixture
+def url_base_api():
+    return "https://jsonplaceholder.typicode.com/users"
+
+
