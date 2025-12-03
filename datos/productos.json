@@ -13,5 +13,10 @@
         "nombre": "Sauce Labs Bolt T-Shirt",
         "precio": 15.99,
         "descripcion": "Camiseta de algodón"
+    },
+    {
+        "nombre": "Sauce Labs Hoodie",
+        "precio": 18.99,
+        "descripcion": "Hoodie de algodón"
     }
 ]

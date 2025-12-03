@@ -10,7 +10,7 @@ def test_catalogo(login_in_driver):
     try:
         WebDriverWait(driver, 10).until(EC.url_contains("/inventory.html"))
 
- # Validar que el título en inventory sea Products
+        # Validar que el título en inventory sea Products
         titulo = WebDriverWait(driver, 10).until(
                 EC.presence_of_element_located((By.CLASS_NAME, "title"))
         ).text
