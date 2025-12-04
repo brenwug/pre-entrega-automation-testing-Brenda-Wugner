@@ -9,3 +9,11 @@
 2025-12-03 20:25:44 INFO TalentoTech: GET → https://jsonplaceholder.typicode.com/users/1
 2025-12-03 20:25:45 INFO TalentoTech: POST → https://jsonplaceholder.typicode.com/users payload={'name': 'Brenda', 'username': 'alumna', 'email': 'brenda@example.com'}
 2025-12-03 20:25:46 INFO TalentoTech: DELETE → https://jsonplaceholder.typicode.com/users/1
+2025-12-03 21:05:43 INFO TalentoTech: Realizando la solitud GET a https://jsonplaceholder.typicode.com/users/1
+2025-12-03 21:05:43 INFO TalentoTech: Realizando solicitud post https://jsonplaceholder.typicode.com/users payload={'name': 'Brenda', 'username': 'alumna', 'email': 'brenda@ejemplo.com'}
+2025-12-03 21:05:44 INFO TalentoTech: JSON POST: {'name': 'Brenda', 'username': 'alumna', 'email': 'brenda@ejemplo.com', 'id': 11}
+2025-12-03 21:09:40 INFO TalentoTech: Realizando la solitud GET a https://jsonplaceholder.typicode.com/users/1
+2025-12-03 21:09:40 INFO TalentoTech: Realizando solicitud post https://jsonplaceholder.typicode.com/users payload={'name': 'Brenda', 'username': 'alumna', 'email': 'brenda@ejemplo.com'}
+2025-12-03 21:09:41 INFO TalentoTech: JSON POST: {'name': 'Brenda', 'username': 'alumna', 'email': 'brenda@ejemplo.com', 'id': 11}
+2025-12-03 21:09:41 INFO TalentoTech: Se solicita DELETE https://jsonplaceholder.typicode.com/users/1
+2025-12-03 21:09:42 INFO TalentoTech: Status DELETE : 200

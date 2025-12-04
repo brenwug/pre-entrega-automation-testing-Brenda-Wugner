@@ -11,7 +11,7 @@ def url_base_api():
 def test_get_user(url_base_api):
 
     url = f"{url_base_api}/1"
-    logger.info(f"GET → {url}")
+    logger.info(f"Realizando la solitud GET a {url}")
 
     response = requests.get(url)
     assert response.status_code == 200, "GET no devolvió 200"
@@ -30,13 +30,14 @@ def test_create_user(url_base_api):
         "email": "brenda@ejemplo.com"
     }
 
-    logger.info(f"POST → {url_base_api} payload={payload}")
+    logger.info(f"Realizando solicitud post {url_base_api} payload={payload}")
 
     response = requests.post(url_base_api, json=payload)
 
     assert response.status_code == 201, "POST no devolvió 201"
 
     data = response.json()
+    logger.info(f"JSON POST: {data}")
     assert data["name"] == payload["name"]
 
 
@@ -44,9 +45,9 @@ def test_create_user(url_base_api):
 def test_delete_user(url_base_api):
 
     url = f"{url_base_api}/1"
-    logger.info(f"DELETE → {url}")
+    logger.info(f"Se solicita DELETE {url}")
 
     response = requests.delete(url)
-
+    logger.info(f"Status DELETE : {response.status_code}")
     assert response.status_code == 200 or response.status_code == 204
 
