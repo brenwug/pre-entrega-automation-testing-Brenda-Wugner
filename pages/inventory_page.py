@@ -5,11 +5,13 @@ from selenium.webdriver.support import expected_conditions as EC
 class InventoryPage:
     _TITLE = (By.CLASS_NAME, "title")
     _PRODUCTS = (By.CLASS_NAME, "inventory_item")
-    _ADD_BUTTONS = (By.CSS_SELECTOR, "button[data-test*='add-to-cart']" ) #TODO VER SI CONVIENE POR CLASSNAME
+    _ADD_BUTTONS = (By.CSS_SELECTOR, "button[data-test*='add-to-cart']" ) 
     _CART_BADGE = (By.CLASS_NAME, "shopping_cart_badge")
     _CART_LINK = (By.CLASS_NAME, "shopping_cart_link")
     _MENU_BUTTON = (By.ID, "react-burger-menu-btn")
-    _LOGOUT_LINK = (By.ID, "logout_sidebar_link")
+    _SORT_CONTAINER = (By.CLASS_NAME, "product_sort_container")
+    _ITEM_NAME = (By.CLASS_NAME, "inventory_item_name")
+    _ITEM_PRICE = (By.CLASS_NAME, "inventory_item_price")
 
     def __init__(self, driver):
         self.driver = driver
@@ -20,6 +22,24 @@ class InventoryPage:
     
     def obtener_productos(self): #obtiene lista de productos
         return self.driver.find_elements(*self._PRODUCTS)
+
+    def obtener_datos_primer_producto(self):
+        productos = self.obtener_productos()
+        if not productos:
+            return None
+        primer = productos[0]
+        nombre = primer.find_element(*self._ITEM_NAME).text
+        precio = primer.find_element(*self._ITEM_PRICE).text
+        return {"nombre": nombre, "precio": precio}
+
+    def es_menu_visible(self):
+        return self.driver.find_element(*self._MENU_BUTTON).is_displayed()
+
+    def es_filtro_visible(self):
+        return self.driver.find_element(*self._SORT_CONTAINER).is_displayed()
+
+    def es_carrito_visible(self):
+        return self.driver.find_element(*self._CART_LINK).is_displayed()
 
     def agregar_primer_producto(self): #Añade primer producto disponible al carrito
         primer_boton = self.driver.find_elements(*self._ADD_BUTTONS) [0]
