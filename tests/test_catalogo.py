@@ -2,6 +2,7 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from utils.datos import leer_json_productos
 import os
 
 def test_catalogo(login_in_driver):
@@ -52,3 +53,22 @@ def test_catalogo(login_in_driver):
     except Exception as e:
         print(f"Error en test catalogo: {e}")
         raise
+
+def test_productos_existentes_en_catalogo(login_in_driver):
+    driver = login_in_driver
+
+    WebDriverWait(driver,10).until(EC.url_contains("/inventory.html"))
+
+    elementos = driver.find_elements(By.CLASS_NAME, "inventory_item_name")
+    nombres_pagina = [elemento.text for elemento in elementos]
+
+    nombres_json = leer_json_productos("datos/productos.json")
+
+    print("Productos esperados del Json:", nombres_json)
+    print("Productos encontrados en página:", nombres_pagina)
+
+    for nombre_esperado in nombres_json:
+        assert nombre_esperado in nombres_pagina, \
+        f"El producto '{nombre_esperado}' no aparece en el catálogo de la página"
+
+    print("Todos los productos del JSON están en el catálogo")
