@@ -26,5 +26,5 @@ class CartPage:
         return InventoryPage(self.driver)
     
     def proceder_checkout(self): #inicia proceso de checkout
-        self.driver.find_element(*self._CHECKOUT_BUTTON).click()  #TODO REVISAR SE PUEDE DEVOLVER CHECKOUT PAGE
+        self.driver.find_element(*self._CHECKOUT_BUTTON).click()  
         return self
