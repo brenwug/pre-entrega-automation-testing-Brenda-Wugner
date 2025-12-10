@@ -13,6 +13,21 @@ def driver():
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-dev-shm-usage")
     chrome_options.add_argument("--start-maximized")
+    
+    # Deshabilitar el gestor de contraseñas y notificaciones de seguridad
+    prefs = {
+        "credentials_enable_service": False,
+        "profile.password_manager_enabled": False,
+        "profile.password_manager_leak_detection": False,
+        "safebrowsing.enabled": False,
+    }
+    chrome_options.add_experimental_option("prefs", prefs)
+    chrome_options.add_argument("--disable-features=PasswordLeakDetection")
+    
+    # Opciones de Selenium preexistentes
+    chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
+    chrome_options.add_experimental_option('useAutomationExtension', False)
+    
     service = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service, options=chrome_options)
     driver.implicitly_wait(5)
@@ -32,10 +47,12 @@ def url_base_api():
 #hook de pytest para que tome screenshot cada vez que un test falla
 @pytest.hookimpl(tryfirst=True, hookwrapper=True)
 def pytest_runtest_makereport(item, call):
-    outcome = yield
-    result = outcome.get_result()
+    pytest_html = item.config.pluginmanager.getplugin("html")
 
-    if result.when == "call" and result.failed:
+    outcome = yield
+    report = outcome.get_result()
+
+    if report.when == "call" and report.failed:
         driver = item.funcargs.get("login_in_driver")
         if driver is None:
             return
@@ -51,3 +68,9 @@ def pytest_runtest_makereport(item, call):
         # Guardar screenshot
         driver.save_screenshot(file_path)
         print(f"Captura guardada: {file_path}")
+
+        
+        if pytest_html:
+                extra = getattr(report, "extra", [])
+                extra.append(pytest_html.extras.image(file_path))
+                report.extra = extra
