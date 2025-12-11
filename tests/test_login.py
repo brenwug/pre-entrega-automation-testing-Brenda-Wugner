@@ -6,6 +6,7 @@ import os
 import pytest
 from pages.login_page import LoginPage
 from utils.datos import leer_csv_login
+from utils.logger import logger
 
 CASOS_LOGIN = leer_csv_login("datos/login.csv") #importa los datos del archivo csv
 
@@ -29,7 +30,8 @@ def test_login(driver, usuario, clave, debe_funcionar):
         os.makedirs("reports", exist_ok=True)
         path = os.path.join("reports", f"login_ok_{usuario}.png")
         driver.save_screenshot(path)
-        print(f"Login correcto con usuario {usuario}")
+        driver.save_screenshot(path)
+        logger.info(f"Login correcto con usuario {usuario}")
     
     else:
         #Login fallido con error visible
@@ -38,4 +40,5 @@ def test_login(driver, usuario, clave, debe_funcionar):
         os.makedirs("reports", exist_ok=True)
         path = os.path.join("reports", f"login_error_{usuario}.png")
         driver.save_screenshot(path)
-        print(f"Error correctamente mostrado para '{usuario}'")
+        driver.save_screenshot(path)
+        logger.info(f"Error correctamente mostrado para '{usuario}'")

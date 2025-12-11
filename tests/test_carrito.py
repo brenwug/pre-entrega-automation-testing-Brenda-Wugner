@@ -1,6 +1,7 @@
 from pages.inventory_page import InventoryPage
 from pages.cart_page import CartPage
 import os
+from utils.logger import logger
 
 def test_carrito(login_in_driver):
     driver = login_in_driver
@@ -13,7 +14,7 @@ def test_carrito(login_in_driver):
     
     # Verificar que el badge del carrito muestra 1
     assert inventory_page.obtener_contador_carrito() == 1
-    print(f"Producto agregado. Badge muestra: {inventory_page.obtener_contador_carrito()}")
+    logger.info(f"Producto agregado. Badge muestra: {inventory_page.obtener_contador_carrito()}")
 
     os.makedirs("reports/screenshots", exist_ok=True)
     screenshot_path = os.path.join("reports/screenshots", "producto_en_carrito.png")
@@ -25,5 +26,5 @@ def test_carrito(login_in_driver):
     # Validar que se haya agregado el producto correcto en el carrito
     nombres_en_carrito = cart_page.obtener_nombres_productos()
     assert nombre_producto_agregado in nombres_en_carrito, "El producto añadido no se agregó correctamente"
-    print(f"Producto verificado en carrito: {nombre_producto_agregado}")
+    logger.info(f"Producto verificado en carrito: {nombre_producto_agregado}")
 

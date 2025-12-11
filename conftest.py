@@ -53,7 +53,7 @@ def pytest_runtest_makereport(item, call):
     report = outcome.get_result()
 
     if report.when == "call" and report.failed:
-        driver = item.funcargs.get("login_in_driver")
+        driver = item.funcargs.get("login_in_driver") or item.funcargs.get("driver")
         if driver is None:
             return
         screenshots_dir = os.path.join("reports", "screenshots")

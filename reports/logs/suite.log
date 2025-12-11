@@ -114,3 +114,69 @@
 2025-12-10 15:31:07 INFO TalentoTech: Iniciando test de checkout completo
 2025-12-10 15:31:07 INFO TalentoTech: Completando información de envío
 2025-12-10 15:31:07 INFO TalentoTech: Mensaje obtenido: Thank you for your order!
+2025-12-10 21:20:10 INFO TalentoTech: Login correcto con usuario standard_user
+2025-12-10 21:20:17 INFO TalentoTech: Error correctamente mostrado para 'locked_out_user'
+2025-12-10 21:20:24 INFO TalentoTech: Login correcto con usuario problem_user
+2025-12-10 21:20:31 INFO TalentoTech: Error correctamente mostrado para 'usuario_malo'
+2025-12-10 21:20:38 INFO TalentoTech: El título en la página es 'Products'
+2025-12-10 21:20:39 INFO TalentoTech: Se encontraron 6 productos
+2025-12-10 21:20:39 INFO TalentoTech: Primer producto: Sauce Labs Backpack - $29.99
+2025-12-10 21:20:39 INFO TalentoTech: El menú está disponible
+2025-12-10 21:20:39 INFO TalentoTech: El filtro está ok
+2025-12-10 21:20:39 INFO TalentoTech: Está el carrito
+2025-12-10 21:20:45 INFO TalentoTech: Productos esperados del Json: ['Sauce Labs Backpack', 'Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Hoodie']
+2025-12-10 21:20:45 INFO TalentoTech: Productos encontrados en página: ['Sauce Labs Backpack', 'Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Fleece Jacket', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)']
+2025-12-10 21:20:53 INFO TalentoTech: Producto agregado. Badge muestra: 1
+2025-12-10 21:20:53 INFO TalentoTech: Producto verificado en carrito: Sauce Labs Backpack
+2025-12-10 21:20:55 INFO TalentoTech: Realizando la solitud GET a https://jsonplaceholder.typicode.com/users/1
+2025-12-10 21:20:56 INFO TalentoTech: Realizando solicitud post https://jsonplaceholder.typicode.com/users payload={'name': 'Brenda', 'username': 'alumna', 'email': 'brenda@ejemplo.com'}
+2025-12-10 21:20:56 INFO TalentoTech: JSON POST: {'name': 'Brenda', 'username': 'alumna', 'email': 'brenda@ejemplo.com', 'id': 11}
+2025-12-10 21:20:56 INFO TalentoTech: Se solicita DELETE https://jsonplaceholder.typicode.com/users/1
+2025-12-10 21:20:57 INFO TalentoTech: Status DELETE : 200
+2025-12-10 21:21:01 INFO TalentoTech: Iniciando test de checkout completo
+2025-12-10 21:21:02 INFO TalentoTech: Completando información de envío
+2025-12-10 21:21:02 INFO TalentoTech: Mensaje obtenido: Thank you for your order!
+2025-12-10 21:29:06 INFO TalentoTech: Login correcto con usuario standard_user
+2025-12-10 21:29:13 INFO TalentoTech: Error correctamente mostrado para 'locked_out_user'
+2025-12-10 21:29:20 INFO TalentoTech: Login correcto con usuario problem_user
+2025-12-10 21:29:27 INFO TalentoTech: Error correctamente mostrado para 'usuario_malo'
+2025-12-10 21:29:34 INFO TalentoTech: El título en la página es 'Products'
+2025-12-10 21:29:34 INFO TalentoTech: Se encontraron 6 productos
+2025-12-10 21:29:34 INFO TalentoTech: Primer producto: Sauce Labs Backpack - $29.99
+2025-12-10 21:29:34 INFO TalentoTech: El menú está disponible
+2025-12-10 21:29:34 INFO TalentoTech: El filtro está ok
+2025-12-10 21:29:34 INFO TalentoTech: El carrito está visible
+2025-12-10 21:29:40 INFO TalentoTech: Productos esperados del Json: ['Sauce Labs Backpack', 'Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Hoodie']
+2025-12-10 21:29:40 INFO TalentoTech: Productos encontrados en página: ['Sauce Labs Backpack', 'Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Fleece Jacket', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)']
+2025-12-10 21:29:47 INFO TalentoTech: Producto agregado. Badge muestra: 1
+2025-12-10 21:29:48 INFO TalentoTech: Producto verificado en carrito: Sauce Labs Backpack
+2025-12-10 21:29:50 INFO TalentoTech: Realizando la solitud GET a https://jsonplaceholder.typicode.com/users/1
+2025-12-10 21:29:50 INFO TalentoTech: Realizando solicitud post https://jsonplaceholder.typicode.com/users payload={'name': 'Brenda', 'username': 'alumna', 'email': 'brenda@ejemplo.com'}
+2025-12-10 21:29:51 INFO TalentoTech: JSON POST: {'name': 'Brenda', 'username': 'alumna', 'email': 'brenda@ejemplo.com', 'id': 11}
+2025-12-10 21:29:51 INFO TalentoTech: Se solicita DELETE https://jsonplaceholder.typicode.com/users/1
+2025-12-10 21:29:51 INFO TalentoTech: Status DELETE : 200
+2025-12-10 21:29:56 INFO TalentoTech: Iniciando test de checkout completo
+2025-12-10 21:29:56 INFO TalentoTech: Completando información de envío
+2025-12-10 21:29:56 INFO TalentoTech: Mensaje obtenido: Thank you for your order!
+2025-12-10 21:35:38 INFO TalentoTech: Login correcto con usuario standard_user
+2025-12-10 21:35:45 INFO TalentoTech: Error correctamente mostrado para 'locked_out_user'
+2025-12-10 21:35:52 INFO TalentoTech: Login correcto con usuario problem_user
+2025-12-10 21:35:59 INFO TalentoTech: Error correctamente mostrado para 'usuario_malo'
+2025-12-10 21:36:06 INFO TalentoTech: El título en la página es 'Products'
+2025-12-10 21:36:06 INFO TalentoTech: Se encontraron 6 productos
+2025-12-10 21:36:06 INFO TalentoTech: Primer producto: Sauce Labs Backpack - $29.99
+2025-12-10 21:36:06 INFO TalentoTech: El menú está disponible
+2025-12-10 21:36:06 INFO TalentoTech: El filtro está ok
+2025-12-10 21:36:06 INFO TalentoTech: El carrito está visible
+2025-12-10 21:36:13 INFO TalentoTech: Productos esperados del Json: ['Sauce Labs Backpack', 'Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Hoodie']
+2025-12-10 21:36:13 INFO TalentoTech: Productos encontrados en página: ['Sauce Labs Backpack', 'Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Fleece Jacket', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)']
+2025-12-10 21:36:20 INFO TalentoTech: Producto agregado. Badge muestra: 1
+2025-12-10 21:36:21 INFO TalentoTech: Producto verificado en carrito: Sauce Labs Backpack
+2025-12-10 21:36:23 INFO TalentoTech: Realizando la solitud GET a https://jsonplaceholder.typicode.com/users/1
+2025-12-10 21:36:23 INFO TalentoTech: Realizando solicitud post https://jsonplaceholder.typicode.com/users payload={'name': 'Brenda', 'username': 'alumna', 'email': 'brenda@ejemplo.com'}
+2025-12-10 21:36:24 INFO TalentoTech: JSON POST: {'name': 'Brenda', 'username': 'alumna', 'email': 'brenda@ejemplo.com', 'id': 11}
+2025-12-10 21:36:24 INFO TalentoTech: Se solicita DELETE https://jsonplaceholder.typicode.com/users/1
+2025-12-10 21:36:25 INFO TalentoTech: Status DELETE : 200
+2025-12-10 21:36:29 INFO TalentoTech: Iniciando test de checkout completo
+2025-12-10 21:36:29 INFO TalentoTech: Completando información de envío
+2025-12-10 21:36:30 INFO TalentoTech: Mensaje obtenido: Thank you for your order!

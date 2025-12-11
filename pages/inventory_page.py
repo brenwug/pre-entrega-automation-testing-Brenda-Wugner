@@ -46,6 +46,11 @@ class InventoryPage:
         primer_boton.click()
         return self
     
+    def obtener_nombres_productos(self):
+        # Devuelve lista de nombres de los productos visibles
+        elementos = self.driver.find_elements(By.CLASS_NAME, "inventory_item_name")
+        return [elemento.text for elemento in elementos]
+
     def obtener_contador_carrito(self): #obtiene número de productos en el carrito
         try:
             badge = self.driver.find_element(*self._CART_BADGE)
