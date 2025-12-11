@@ -3,26 +3,42 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import os
-from utils.utils import login
+import pytest
+from pages.login_page import LoginPage
+from utils.datos import leer_csv_login
+from utils.logger import logger
 
+CASOS_LOGIN = leer_csv_login("datos/login.csv") #importa los datos del archivo csv
 
-def test_login(driver):
+@pytest.mark.parametrize("usuario, clave, debe_funcionar", CASOS_LOGIN)
+def test_login(driver, usuario, clave, debe_funcionar):
+    login = LoginPage(driver)
 
+    login.abrir_pagina()
 
-    try:
-        # Ir al sitio y validar login pero importado desde utils.py
-        login(driver)
+    login.completar_usuario(usuario)
+    login.completar_clave(clave)
+    login.hacer_clic_login()
 
+    if debe_funcionar:
+        # Login exitoso, valida inventario
         WebDriverWait(driver, 10).until(EC.url_contains("/inventory.html"))
 
         # Validar resultado /inventory.html
-        assert "/inventory.html" in driver.current_url, "No se redirigió correctamente al inventario"
+        assert "/inventory.html" in driver.current_url, "El login debería funcionar pero no redirigió al inventario"
+
         os.makedirs("reports", exist_ok=True)
-        screenshot_path = os.path.join("reports", "login_exitoso.png")
-        driver.save_screenshot(screenshot_path)
-        print("Login exitoso y validado correctamente")
+        path = os.path.join("reports", f"login_ok_{usuario}.png")
+        driver.save_screenshot(path)
+        driver.save_screenshot(path)
+        logger.info(f"Login correcto con usuario {usuario}")
+    
+    else:
+        #Login fallido con error visible
+        assert login.esta_error_visible(), f"Se esperaba error con el usuario '{usuario}'"
 
-    except Exception as e:
-        print(f"Error en test login: {e}")
-        raise
-
+        os.makedirs("reports", exist_ok=True)
+        path = os.path.join("reports", f"login_error_{usuario}.png")
+        driver.save_screenshot(path)
+        driver.save_screenshot(path)
+        logger.info(f"Error correctamente mostrado para '{usuario}'")

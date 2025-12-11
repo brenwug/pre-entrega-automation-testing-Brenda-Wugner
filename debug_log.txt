@@ -1,0 +1,35 @@
+report.when=setup, report.failed=False
+report.when=call, report.failed=False
+report.when=teardown, report.failed=False
+report.when=setup, report.failed=False
+report.when=call, report.failed=False
+report.when=teardown, report.failed=False
+report.when=setup, report.failed=False
+report.when=call, report.failed=False
+report.when=teardown, report.failed=False
+report.when=setup, report.failed=False
+report.when=call, report.failed=False
+report.when=teardown, report.failed=False
+report.when=setup, report.failed=False
+report.when=call, report.failed=False
+report.when=teardown, report.failed=False
+report.when=setup, report.failed=False
+report.when=call, report.failed=True
+Driver found: True. Keys: ['login_in_driver', 'driver']
+Captura guardada: reports\screenshots\test_productos_existentes_en_catalogo_2025-12-10_15-20-21.png
+report.when=teardown, report.failed=False
+report.when=setup, report.failed=False
+report.when=call, report.failed=False
+report.when=teardown, report.failed=False
+report.when=setup, report.failed=False
+report.when=call, report.failed=False
+report.when=teardown, report.failed=False
+report.when=setup, report.failed=False
+report.when=call, report.failed=False
+report.when=teardown, report.failed=False
+report.when=setup, report.failed=False
+report.when=call, report.failed=False
+report.when=teardown, report.failed=False
+report.when=setup, report.failed=False
+report.when=call, report.failed=False
+report.when=teardown, report.failed=False
